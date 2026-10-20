@@ -17,7 +17,7 @@ import { checkRateLimit, rateLimitHeaders } from "./lib/ratelimit";
 import type { Env } from "./types";
 
 /** Endpoints that stay open even when API_KEY is configured. */
-const PUBLIC_PATHS = new Set(["/", "/health", "/openapi.json", "/favicon.ico"]);
+const PUBLIC_PATHS = new Set(["/", "/health", "/openapi.json", "/favicon.ico", "/stream", "/hls"]);
 
 /** Endpoints that hit TeraBox, and are therefore rate limited. */
 const METERED_PATHS = new Set(["/api/resolve", "/api/batch", "/stream", "/hls", "/segment"]);
